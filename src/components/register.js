@@ -73,8 +73,6 @@ export default function Register() {
         }
       })
       .catch(function (error) {
-        console.log("hello");
-        console.log(error.response.data);
         if (Object.keys(error).includes("response")) {
           error = error.response.data;
         }

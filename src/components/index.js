@@ -10,7 +10,7 @@ export default function Index({ parentState, parentStateSetter }) {
   return parentState ? (
     <>
       <Center>
-        <Text fontSize="4xl">Olá, {getName()}</Text>
+        <Text fontSize="4xl">Olá, {getName() ?? parentStateSetter("")}</Text>
       </Center>
     </>
   ) : (

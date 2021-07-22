@@ -90,7 +90,6 @@ export default function Profile({ parentStateSetter, parentState }) {
         }
       })
       .catch(function (error) {
-        console.log(error.response.data);
         if (Object.keys(error).includes("response")) {
           error = error.response.data;
         }
@@ -200,22 +199,22 @@ export default function Profile({ parentStateSetter, parentState }) {
             <TextField
               variant="outlined"
               margin="normal"
-              required
+              autoComplete="new-password"
               fullWidth
-              name="password"
+              name="new-password"
               label="Nova Senha"
               type="password"
               value={password}
               onChange={(e) => {
                 setPassword(e.target.value);
               }}
-              id="password"
-              autoComplete="current-password"
+              id="new-password"
             />
 
             <Typography component="h5" variant="h5">
-              {error.password}
+              {error["password"]}
             </Typography>
+
             <TextField
               variant="outlined"
               margin="normal"
