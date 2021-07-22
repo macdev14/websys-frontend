@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Center, Text } from "@chakra-ui/react";
 import Login from "./login";
 
@@ -7,14 +7,10 @@ function getName() {
 }
 
 export default function Index({ parentState, parentStateSetter }) {
-  const [name, setName] = useState("");
-  useEffect(() => {
-    setName(getName());
-  }, [name]);
   return parentState ? (
     <>
       <Center>
-        <Text fontSize="4xl">Olá, {name}</Text>
+        <Text fontSize="4xl">Olá, {getName()}</Text>
       </Center>
     </>
   ) : (
