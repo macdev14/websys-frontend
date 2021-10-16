@@ -1,4 +1,4 @@
-# Simple user login and registration system
+# Simple front-end api consuming of [https://websysm.herokuapp.com]
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
